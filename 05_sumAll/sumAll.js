@@ -41,36 +41,6 @@ if (x>y){
 }
 
 
-
-
-/*if (y>x){
-    let finalSum = 0
-    let newArray = [];
-    (function summarizer(){
-        for (let i=y;i>=x;i--){
-            newArray.push(i);
-        }
-    })
-    (function adder(){
-        for (let i = 0;i<newArray.length;i++){
-    finalSum += newArray[i];
-        }
-    })
-*/
-    
-  
-
-
-
-
-
-
-
-
-
-
-
-
 else {
     return "ERROR"
 }
