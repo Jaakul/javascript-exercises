@@ -1,10 +1,8 @@
 
 const findTheOldest = function(people){
     let oldest = people.reduce(reducer);
-    return oldest.name;
+    return oldest;
 }
-
-
 const todayDate = new Date();
 const year = todayDate.getFullYear();
 
