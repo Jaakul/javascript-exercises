@@ -1,7 +1,8 @@
 const regex  = /[a-zA-Z]/
-let newString = ''
+
 
 const caesar = function(string,preNum) {
+    let newString = ''
 let num = preNum%26;
 //reference-- String.fromCharCode(string.charCodeAt(i))
 
@@ -23,11 +24,21 @@ if (regex.test(String.fromCharCode(string.charCodeAt(i)))==true){
         
         if (String.fromCharCode(letter.charCodeAt(0))=="Z"){
             letter = "A"
+            letter = String.fromCharCode(letter.charCodeAt(0)-1)
 
         }
         if (String.fromCharCode(letter.charCodeAt(0))=="z"){
             letter = "a"
+            letter = String.fromCharCode(letter.charCodeAt(0)-1)
         }
+/* due to the nature of if/else ,, this would fail without
+the following --placeholder if statement-- because the *if* 
+statement before the last else statement must be false before 
+it runs the final else statement, which we need
+MUST FIND A WAY TO SOLVE THIS
+*/
+
+        if (letter == Number){}
         else {letter = String.fromCharCode(letter.charCodeAt(0)+1)}
     }
     newString += letter;
@@ -38,16 +49,21 @@ if (regex.test(String.fromCharCode(string.charCodeAt(i)))==true){
     
 }
     // (-) number
+    /* must find a way to consolidate whether the num is +/-*/
+    
     else{
 
-    for (let y=0;y>num+1;y--){
+    for (let y=0;y>num;y--){
         if (String.fromCharCode(letter.charCodeAt(0))=="A"){
             letter = "Z"
+            letter = String.fromCharCode(letter.charCodeAt(0)+1)
             
         }
         if (String.fromCharCode(letter.charCodeAt(0))=="a"){
             letter = "z"
+            letter = String.fromCharCode(letter.charCodeAt(0)+1)
         }
+        if (letter == Number){}
         else {letter = String.fromCharCode(letter.charCodeAt(0)-1)}
     }
     newString += letter;
